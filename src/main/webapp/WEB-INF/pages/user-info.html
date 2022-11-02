@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div align="left">
+    <h2>Данные пользователя:</h2>
+    <form action="#" th:action="@{/saveUser}" method="post" th:object="${user}">
+        <input type="hidden" th:field="*{id}"/><br/>
+
+        <label>Имя:</label>
+        <input type="text" th:field="*{name}"/><br/>
+
+        <label>Фамилия:</label>
+        <input type="text" th:field="*{lastName}"/><br/>
+
+        <label>Возраст:</label>
+        <input type="text" th:field="*{age}"/><br/>
+
+        <button type="submit">OK</button>
+    </form>
+</div>
+
+</body>
+</html>
